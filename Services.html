@@ -1,25 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ✨ Salin CSS Custom Hover Effect dari home.html -->
+  <style>
+    /* Custom Hover Effect */
+    .hover-effect {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hover-effect::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #FFD700;
+      transition: width 0.3s ease;
+    }
+
+    .hover-effect:hover::after {
+      width: 100%;
+    }
+
+    .hover-effect h2 {
+      color: #FFD700;
+      transition: color 0.3s ease;
+    }
+
+    .hover-effect:hover h2 {
+      color: #fff;
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px #000000;
+    }
+
+    /* Button Hover Glow */
+    .btn-hover {
+      background-color: #FFD700;
+      color: black;
+      transition: all 0.3s ease;
+    }
+
+    .btn-hover:hover {
+      background-color: #fbbf24;
+      box-shadow: 0 0 15px #fbbf24;
+    }
+  </style>
 </head>
-<body>
-    
-    <!-- Header -->
-  <header class="border-b border-blue-800 bg-gray-950 p-6 flex justify-between items-center">
-    <div class="text-yellow-400 text-xl font-bold">LOGO</div>
+<body class="bg-gray-950 text-gray-100 min-h-screen font-sans">
+
+  <!-- Header -->
+  <header class="border-b border-gray-700 bg-gray-950 p-6 flex justify-between items-center">
+    <img src="img/logo.png" alt="neko" class="h-10">
     <nav class="flex space-x-4 text-sm text-gray-300">
       <a href="home.html" class="hover:text-yellow-400 transition">Home</a>
       <a href="Services.html" class="hover:text-yellow-400 transition">Services</a>
       <a href="Portfolio.html" class="hover:text-yellow-400 transition">Portfolio</a>
-      <a href="#event" class="hover:text-yellow-400 transition">Events</a>
+      <a href="Event.html" class="hover:text-yellow-400 transition">Events</a>
     </nav>
   </header>
-    <h1 class="text-3xl font-bold underline">
-        Services Page
-    </h1>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 py-10 space-y-8 max-w-7xl">
+
+    <!-- Intro & USP -->
+    <section class="p-8 bg-gray-900 border border-gray-700 rounded-lg hover-effect card-hover">
+      <h2 class="text-yellow-400 text-xl font-semibold mb-4">Intro & USP</h2>
+      <p class="text-gray-300 leading-relaxed">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </section>
+
+    <!-- Branding dan Digital Marketing -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Branding -->
+      <section class="p-8 bg-gray-900 border border-gray-700 rounded-lg hover-effect card-hover">
+        <h2 class="text-yellow-400 text-xl font-semibold mb-4">Branding</h2>
+        <p class="text-gray-300 leading-relaxed">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </section>
+
+      <!-- Digital Marketing -->
+      <section class="p-8 bg-gray-900 border border-gray-700 rounded-lg hover-effect card-hover">
+        <h2 class="text-yellow-400 text-xl font-semibold mb-4">Digital Marketing</h2>
+        <p class="text-gray-300 leading-relaxed">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </section>
+    </div>
+
+    <!-- Pernyataan -->
+    <section class="p-8 bg-gray-900 border border-gray-700 rounded-lg hover-effect card-hover">
+      <h2 class="text-yellow-400 text-xl font-semibold mb-4">Kenapa terintegrasi?</h2>
+      <p class="text-gray-300 leading-relaxed">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </p>
+    </section>
+
+    <!-- CTA Konsultasi -->
+    <section class="p-8 bg-gray-900 border border-gray-700 rounded-lg hover-effect card-hover">
+      <h2 class="text-yellow-400 text-xl font-semibold mb-4">CTA Konsultasi</h2>
+      <p class="text-gray-300 leading-relaxed mb-6">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> 
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <a href="https://wa.me/6281210793464" class="inline-block bg-yellow-500 text-black px-6 py-2 rounded-md mt-6 btn-hover">
+        Konsultasi Sekarang
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-6 px-6 bg-gray-900 border-t border-gray-700 text-center text-gray-400">
+    <p>&copy; 2025 Creative Neko Project. Semua hak dilindungi.</p>
+  </footer>
 </body>
 </html>
